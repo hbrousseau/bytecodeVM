@@ -33,20 +33,7 @@ Otherwise, to execute a Lox source file:
 ## Testing
 I used the test cases from [Robert Nystrom's Lox unit tests](https://github.com/munificent/craftinginterpreters/tree/master/test) excluding the benchmark portion. I will point out that the runtime errors will pop up in the terminal window instead of the test_output.txt. There is a test case inside of limits that throws a stack_overflow as well. 
 
-Test cases can be run individually by `make test-name` or run all at once by `make test-all`
-
-```
---- tests/test-statements.lox.expected	2023-12-02 17:30:12.368787300 -0600
-+++ -	2023-12-08 13:52:52.201994800 -0600
-@@ -1,3 +1,3 @@
--one
--true
--3.000000
-+one
-+true
-+3
-```
-For some reason, my code doesn't generate the trailing zeroes. However, it does produce the expected output.
+Test cases can run all at once by `make test-all`
 
 **Note:** If you would like to generate your own output text, I would either make a copy of the test_output.txt file and delete the contents so the output would read directly inside that file. Or, you can modify the Makefile at the OUTPUT_FILE variable to save it inside a different folder. If you end up modifying the Makefile, you could also just change the filename. 
 
