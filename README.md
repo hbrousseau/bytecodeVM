@@ -1,5 +1,5 @@
 # cLox
-cLox is a modern c++ implementation heavily reliant upon *jlox* from Part II of [Crafting Interpreters](https://www.craftinginterpreters.com/) by Robert Nystrom. This project was developed as an assignment for CS 403 at the University of Alabama during Fall of 2023. Throughout the development of cLox, I attempted to stay as true to the original implementation as I could. For more information of my challenges, look under [Challenges](#challenges) or skip it if you don't want to hear me complain.
+cLox is a modern c++ implementation heavily reliant upon *clox* from Part III of [Crafting Interpreters](https://www.craftinginterpreters.com/) by Robert Nystrom. This project was developed as an assignment for CS 403 at the University of Alabama during Fall of 2023. Throughout the development of cLox, I attempted to stay as true to the original implementation as I could. For more information of my challenges, look under [Challenges](#challenges) or skip it if you don't want to hear me complain.
 
 cLox has been tested on Windows 10 and 11 with Microsoft's VS Code. If you would like to test it on your own system, please follow the instructions found under the [Building](#building) header. If you have any issues, please email me at: hbrousseau@crimson.ua.edu
 
