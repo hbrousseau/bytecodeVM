@@ -1,5 +1,5 @@
-# cLox
-cLox is a modern c++ implementation heavily reliant upon *clox* from Part III of [Crafting Interpreters](https://www.craftinginterpreters.com/) by Robert Nystrom. This project was developed as an assignment for CS 403 at the University of Alabama during Fall of 2023. Throughout the development of cLox, I attempted to stay as true to the original implementation as I could. For more information of my challenges, look under [Challenges](#challenges) or skip it if you don't want to hear me complain.
+# clox Byetcode VM
+cLox is a modern c++ implementation heavily reliant upon *clox* from Part III of [Crafting Interpreters](https://www.craftinginterpreters.com/) by Robert Nystrom. This project was developed as an assignment for CS 403 at the University of Alabama during the Fall of 2023. Throughout the development of cLox, I attempted to stay as true to the original implementation as I could. For more information on my challenges, look under [Challenges](#challenges) or skip it if you don't want to hear me complain.
 
 cLox has been tested on Windows 10 and 11 with Microsoft's VS Code. If you would like to test it on your own system, please follow the instructions found under the [Building](#building) header. If you have any issues, please email me at: hbrousseau@crimson.ua.edu
 
@@ -31,7 +31,7 @@ Otherwise, to execute a Lox source file:
 ```
 
 ## Testing
-I used the test cases from [Robert Nystrom's Lox unit tests](https://github.com/munificent/craftinginterpreters/tree/master/test) excluding the benchmark portion. I will point out that the runtime errors will pop up in the terminal window instead of the test_output.txt. There is a test case inside of limits that throws a stack_overflow as well. 
+I used the test cases from [Robert Nystrom's Lox unit tests](https://github.com/munificent/craftinginterpreters/tree/master/test), excluding the benchmark portion. I will point out that the runtime errors will pop up in the terminal window instead of the test_output.txt. There is a test case inside of limits that throws a stack_overflow as well. 
 
 Test cases can run all at once by `make test-all`
 
@@ -49,7 +49,7 @@ OUTPUT_FILE := testFolderName/test_output.txt
 
 ## Challenges 
 
-Even though I followed the book to a T, I had to restart a few times as I was encountering strange behavior. For instance, I completely restarted when I got to chapter 21, because I kept running into errors that the variables were not being stored. But, in previous chapters it was. I believe the issue was with the hash table and the scanner. After restarting, I got stuck again in ch24 and it was another issue with the hash table. Then, I got stuck at ch28, with using 'this.' However, this one was not a problem with the hash table. I decided to finish the book and come back for this later, since I was almost to the end and everything else was working. The problem: After declaring 'this' as a variable inside my initCompiler function, I accidentally wrote what was in the else statement outside of the else statement as well. So, this is the correct way to implement:
+Even though I followed the book to a T, I had to restart the project a few times as I encountered strange behavior. For instance, I completely restarted when I got to chapter 21 because I kept running into errors that the variables were not being stored. But, in previous chapters, it was. I believe the issue was with the hash table and the scanner. After restarting, I got stuck again in Ch24; another issue was with the hash table. Then, I got stuck in chapter 28, using 'this.' However, this one was not a problem with the hash table. I decided to finish the book and return for this later since I was almost to the end, and everything else was working. The problem: After declaring 'this' as a variable inside my initCompiler function, I also accidentally wrote what was in the else statement outside of the else statement. So, this is the correct way to implement:
 ```
 if (type != TYPE_FUNCTION) {                            // added in ch28
         local->name.start = "this";
@@ -76,4 +76,4 @@ if (type != TYPE_FUNCTION) {                            // added in ch28
     local->name.length = 0; // ??
 ```
 
-See the problem? Yeah, took me way too long to see that. 
+See the problem? Yeah, it took me way too long to see that. 
