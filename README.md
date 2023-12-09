@@ -22,12 +22,12 @@ To compile the entire interpreter, run `make`
 ## Usage
 clox has two usages: either as a REPL (read, print, eval loop) or, given a source file, cLox will attempt to execute the code and exit the program. To run the program as a REPL:
 ```
-./cLox.exe
+./clox.exe
 ```
 
 Otherwise, to execute a Lox source file:
 ```
-./cLox.exe [Lox script]
+./clox.exe [Lox script]
 ```
 
 ## Testing
